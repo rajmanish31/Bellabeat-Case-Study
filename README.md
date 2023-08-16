@@ -1,1 +1,100 @@
 # Google-Data-Analytics-Bellabeat-Case-Study
+This is part of Google Data Analytics Capstone: Complete a Case Study Project. In this case study we follows 6 steps of Data Analysis taught in the Google Data Analytics Professional Certificate course: **Ask, Prepare, Process, Analyse, Share** and **Act.**
+
+## Introduction
+
+In this case study, you will perform many real-world tasks of a junior data analyst. You will imagine you are working for Bellabeat, a high-tech manufacturer of health-focused products for women, and meet different characters and team members.
+
+## Scenario
+You are a junior data analyst working on the marketing analyst team at Bellabeat, a high-tech manufacturer of health-focused products for women. Bellabeat is a successful small company, but they have the potential to become a larger player in the global smart device market. Urška Sršen, cofounder and Chief Creative Officer of Bellabeat, believes that analyzing smart device fitness data could help unlock new growth opportunities for the company. You have been asked to focus on one of Bellabeat’s products and analyze smart device data to gain insight into how consumers are using their smart devices. The insights you discover will then help guide marketing strategy for the company. You will present your analysis to the Bellabeat executive team along with your high-level recommendations for Bellabeat’s marketing strategy.
+
+## Characters and products
+* Characters
+    * **Urška Sršen:** Bellabeat’s cofounder and Chief Creative Officer
+    * **Sando Mur:** Mathematician and Bellabeat’s cofounder; key member of the Bellabeat executive team
+    * **Bellabeat marketing analytics team:** A team of data analysts responsible for collecting, analyzing, and reporting data that helps guide Bellabeat’s marketing strategy. You joined this team six months ago and have been busy learning about Bellabeat’’s mission and business goals — as well as how you, as a junior data analyst, can help Bellabeat achieve them.
+
+* Productus
+    *  **Bellabeat app:** The Bellabeat app provides users with health data related to their activity, sleep, stress, menstrual cycle, and mindfulness habits. This data can help users better understand their current habits and make healthy decisions. The Bellabeat app connects to their line of smart wellness products.
+    * **Leaf:** Bellabeat’s classic wellness tracker can be worn as a bracelet, necklace, or clip. The Leaf tracker connects to the Bellabeat app to track activity, sleep, and stress.
+    * **Time:** This wellness watch combines the timeless look of a classic timepiece with smart technology to track user activity, sleep, and stress. The Time watch connects to the Bellabeat app to provide you with insights into your daily wellness.
+    * **Spring:** This is a water bottle that tracks daily water intake using smart technology to ensure that you are appropriately hydrated throughout the day. The Spring bottle connects to the Bellabeat app to track your hydration levels.
+    * **Bellabeat membership:** Bellabeat also offers a subscription-based membership program for users. Membership gives users 24/7 access to fully personalized guidance on nutrition, activity, sleep, health and beauty, and mindfulness based on their lifestyle and goals.
+ 
+## About the Company
+Bellabeat is a high-tech manufacturer of beautifully-designed health-focused smart products for women since 2013. Inspiring and empowering women with knowledge about their own health and habits, Bellabeat has grown rapidly and quickly positioned itself as a tech-driven wellness company for females.
+
+
+The case study follows the 6 steps of  data analysis process taught in Google Data Analytics Professional Certificate Course: **Ask, Prepare, Process, Analyse, Share** and **Act.**
+
+## Step 1: Ask
+In this step, we hvae to identify our business problem.
+
+### Business Task:
+Analyze Bellabeat app data to gain insights into how consumers are using their app and discover trends for Bellabeat marketing strategy.
+
+### Business Objective:
+1. What are some trends in smart device usage?
+2. How could these trends apply to Bellabeat customers?
+3. How could these trends help influence Bellabeat marketing strategy?
+
+### Deliverables:
+1. A clear summary of the business task
+2. A description of all data sources used
+3. Documentation of any cleaning or manipulation of data
+4. A summary of your analysis
+5. Supporting visualizations and key findings
+6. Your top high-level content recommendations based on your analysis
+
+### Key Stakeholders:
+* Primary Stakeholder: Urška Sršen,  Sando Mur
+* Secondary Stakeholder: Bellabeat marketing analytics team
+
+## Step 2: Prepare
+In the step, we identify the data being used and its limitations.
+
+### Data Source:
+1. Data is publicly available on [Kaggle: FitBit Fitness Tracker Data](https://www.kaggle.com/datasets/arashnic/fitbit).
+2. It is available through [Mobius](https://www.kaggle.com/arashnic)
+2. Dataset contain 18 csv files.
+3. This data is generated by respondents to a distributed survey via Amazon Mechanical Turk between March 12, 2016 and May 12, 2016.
+4. 30 Fitbit users consented to the submission of personal tracker data.
+5. This data includes minute-level output for physical activity, heart rate, and sleep monitoring.
+
+### Is Data ROCCC:
+ROCCC is a method used to determine the credibility of the data.
+* **R**eliable – It is not reliable because it contains only 30 respondents.
+* **O**riginal - It is provided by third party (Amazon Mechanical Turk). 
+* **C**omprehensive - Parameters match most of Bellabeat products’ parameters.
+* **C**urrent – Since it is collected 6 years ago so it may not be relevant.
+* **C**ited - Data collected from third party, hence unknown.
+
+Overall, the dataset is considered bad quality data and it is not recommended to produce business recommendations based on this data.
+
+### Data Selection:
+The following file is selected for analysis.
+```
+dailyActivity_merged.csv
+```
+## Step 3: Process
+In this step, we clean and transform the data in preferred tool and ensure that data is correct, relevant, complete and free of error and outlier, which is used for analysis in next step, by performing following task:
+* Explore and observe the data
+* Check for and treat missing or null values
+* Transform data — format data type
+* Perform preliminary statistical analysis
+
+### Tool:
+We are using R for data cleaning, transformation and visualization.
+
+### Preparing the R Environment:
+Install and load required package.
+```
+# Install packages
+install.packages("tidyverse")
+
+# Load package
+library(tidyverse)
+library(lubridate)
+library(dplyr)
+library(tidyr)
+```
