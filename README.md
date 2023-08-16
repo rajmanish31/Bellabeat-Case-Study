@@ -98,3 +98,90 @@ library(lubridate)
 library(dplyr)
 library(tidyr)
 ```
+After prepared the environment we will do following steps:
+1. Uploading dataset
+2. Data Cleaning and Manipulation
+   1. Observe and familiarize with data
+   2. Check for null or missing values
+   3. Perform sanity check of data
+3. Crating new columns for Day of week, total minutes and total hours.
+
+
+## Step 4: Analyse
+### Performing Calculations
+Pulling statistics for analysis:
+* mean
+* min and max
+* percentile 25%, 50%, 75%
+
+```
+# Describe dataset
+str(daily_activity)
+```
+![Screenshot from 2023-08-16 11-23-20](https://github.com/rajmanish31/Google-Data-Analytics-Bellabeat-Case-Study/assets/61666590/a4913132-a55f-4a0b-b3a0-e73a7e5b9a57)
+
+Interpreting statistical findings:
+1. On average, users logged 7,638 steps or 5.4km which is not adequate. As recommended by CDC, an adult female has to aim at least 10,000 steps or 8km per day to benefit from general health, weight loss and fitness improvement. [Source: Medical News Today article](https://www.medicalnewstoday.com/articles/how-many-steps-should-you-take-a-day)
+2. Sedentary users are the majority logging on average 991 minutes or 20 hours making up 81% of total average minutes.
+3. Noting that average calories burned is 2,304 calories equivalent to 0.6 pound. Could not interpret into detail as calories burned depend on several factors such as the age, weight, daily tasks, exercise, hormones and daily calorie intake. [Source: Health Line article](https://www.healthline.com/health/fitness-exercise/how-many-calories-do-i-burn-a-day#Burning-calories)
+
+## Step 5: Share
+In this step, we are creating visualizations and communicating our findings based on our analysis.
+
+### Frequency of usage across the week
+![1](https://github.com/rajmanish31/Google-Data-Analytics-Bellabeat-Case-Study/assets/61666590/a27f4bae-a5e0-455a-8083-a1f8f0c8f0a3)
+
+In the above histogram, we are looking at the frequency of FitBit app usage in terms of days of the week.
+1. We discovered that users prefer or remember (giving them the doubt of benefit that they forgotten) to track their activity on the app during midweek from Tuesday to Friday.
+2. Noting that the frequency dropped on Friday and continue on weekends and Monday.
+
+### Calories burned for every step taken
+![2](https://github.com/rajmanish31/Google-Data-Analytics-Bellabeat-Case-Study/assets/61666590/d42cb715-9a5a-4c53-a7f9-fb555b4df6a7)
+
+From the above scatter plot, we discovered that:
+1. It is a positive correlation.
+2. We observed that intensity of calories burned increase when users are at the range of > 0 to 15,000 steps with calories burn rate cooling down from 15,000 steps onwards.
+3. Noted a few outliers:
+   * Zero steps with zero to minimal calories burned.
+   * observation of > 35,000 steps with < 3,000 calories burned.
+   * Deduced that outliers could be due to natural variation of data, change in user’s usage or errors in data collection (ie. miscalculations, data contamination or human error).
+
+### Calories burned for every hour logged
+![3](https://github.com/rajmanish31/Google-Data-Analytics-Bellabeat-Case-Study/assets/61666590/5461799b-3afa-4b72-8fb3-871256fbcf14)
+
+The scatter plot is showing:
+1. A weak positive correlation whereby the increase of hours logged does not translate to more calories being burned. That is largely due to the average sedentary hours (purple line) plotted at the 16 to 17 hours range.
+2. Again, we can see a few outliers:
+   * The same zero value outliers
+   * An unusual red dot at the 24 hours with zero calorie burned which may be due to the same reasons as above.
+
+### Percentage of Activity in Minutes
+![4](https://github.com/rajmanish31/Google-Data-Analytics-Bellabeat-Case-Study/assets/61666590/b3fe3585-84be-46a8-8c0c-59d543126446)
+
+As seen from the pie chart,
+
+1. Sedentary minutes takes the biggest slice at 81.3%.
+2. This indicates that users are using the FitBit app to log daily activities such as daily commute, inactive movements (moving from one spot to another) or running errands.
+3. App is rarely being used to track fitness (ie. running) as per the minor percentage of fairly active activity (1.1%) and very active activity (1.7%). This is highly discouraging as FitBit app was developed to encourage fitness.
+
+## Step 6: Act
+In the final step, we will be delivering our insights and providing recommendations based on our analysis.
+
+Here, we revisit our business questions and share with you our high-level business recommendations.
+
+**1. What are the trends identified?**
+* Majority of users (81.3%) are using the FitBit app to track sedentary activities and not using it for tracking their health habits.
+* Users prefer to track their activities during weekdays as compared to weekends - perhaps because they spend more time outside on weekdays and stay in on weekends.
+
+**2. How could these trends apply to Bellabeat customers?**
+* Both companies develop products focused on providing women with their health, habit and fitness data and encouraging them to understand their current habits and make healthy decisions. These common trends surrounding health and fitness can very well be applied to Bellabeat customers.
+
+**3. How could these trends help influence Bellabeat marketing strategy?**
+
+* Bellabeat marketing team can encourage users by educating and equipping them with knowledge about fitness benefits, suggest different types of exercise (ie. simple 10 minutes exercise on weekday and a more intense exercise on weekends) and calories intake and burnt rate information on the Bellabeat app.
+* On weekends, Bellabeat app can also prompt notification to encourage users to exercise.
+
+
+
+
+
