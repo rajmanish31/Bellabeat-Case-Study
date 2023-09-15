@@ -106,7 +106,7 @@ After prepared the environment we will do following steps:
    3. Perform sanity check of data
 3. Crating new columns for Day of week, total minutes and total hours.
 
-[Click here](https://www.kaggle.com/code/manish0831/bellabeat-case-study/edit) to view code for above steps and for for below plot.
+[Click here](https://github.com/rajmanish31/Google-Data-Analytics-Bellabeat-Case-Study/blob/main/bellabeat-case-study.ipynb) to view code for above steps and for below plot.
 ## Step 4: Analyse
 ### Performing Calculations
 Pulling statistics for analysis:
