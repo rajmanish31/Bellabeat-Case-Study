@@ -1,4 +1,4 @@
-# Google-Data-Analytics-Bellabeat-Case-Study
+# Bellabeat-Case-Study
 This is part of Google Data Analytics Capstone: Complete a Case Study Project. In this case study we follows 6 steps of Data Analysis taught in the Google Data Analytics Professional Certificate course: **Ask, Prepare, Process, Analyse, Share** and **Act.**
 
 ## Introduction
